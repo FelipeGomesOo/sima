@@ -1,0 +1,14 @@
+*.sass-cache
+*.DS_Store
+*node_modules/
+*package.json
+*package-lock.json
+*config.rb
+*gulpfile.js 
+*blog/
+*blog/wp-content/uploads/
+*blog/wp-content/plugins/
+.env
+.env.production
+__.htaccess
+.htaccess

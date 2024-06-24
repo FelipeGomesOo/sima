@@ -1,0 +1,72 @@
+.top-animate {background: #fff !important; top: 13px !important; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.mid-animate {opacity: 0; }
+.bottom-animate {background: #fff !important; top: 13px !important; -webkit-transform: rotate(-225deg); transform: rotate(-225deg); }
+.top-animate, .bottom-animate {top:0.3125rem!important;}
+
+.menui {background: #fff; transition: 0.6s ease; transition-timing-function: cubic-bezier(.75, 0, .29, 1.01); position: absolute; width: 1.7rem; height:2px; border-radius: 10px; }
+.top-menu {top: 0px;}
+.mid-menu {top: 8px;}
+.bottom-menu {top: 16px;}
+
+.menu-usuario {z-index: 999; position: absolute; display: block; margin: 15px 0 0 0; height: 27px; width: 27px; right: 1.5rem; top: 1rem; }
+.mobilenav {color:#fff; top: 0; left:0; z-index: 990; display: none; position: fixed; width: 100%; height: 100%; background: $forte; 
+    .row {max-width: 84.75rem!important; margin-right: auto!important; margin-left: auto!important; }
+    .main {padding-bottom: 0;}
+    ul {margin: 1rem 0;
+        li {
+            li {
+                a {color:$primaria; padding-left:1.5rem; display: block;}
+            }
+        }
+    }
+    li {padding:0.5rem 0; }
+     
+    hr {    margin: 1.5rem 0 1.75rem 0; background: $primaria; }
+}
+
+.header {padding:1.5rem 0 3rem 0; }
+
+.mobilenav {
+/* Acordeon styles */
+.tab {position: relative; margin-bottom: 1px; width: 100%; color: #fff; overflow: hidden; }
+
+    input {position: absolute; opacity: 0; z-index: -1; }
+    label {position: relative; padding-right: 1rem }
+
+.tab-content {max-height: 0; overflow: hidden; margin: 0!important;
+    -webkit-transition: max-height .35s; -o-transition: max-height .35s; transition: max-height .35s;
+}
+/* :checked */
+input:checked ~ .tab-content {max-height: 30rem;  margin: 1rem 0!important; }
+/* Icon */
+label::after {line-height: 1.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+input[type=checkbox] + label::after {content: "+"; }
+input[type=radio] + label::after {content: "\25BC"; }
+input[type=checkbox]:checked + label::after {transform: rotate(315deg); }
+input[type=radio]:checked + label::after {transform: rotateX(180deg); }
+}
+
+@media print, screen and (max-width: 64em) {
+.mobilenav {
+    overflow-y: scroll; 
+    -webkit-overflow-scrolling: touch;
+    }
+}
+@media print, screen and (min-width: 40em) and (max-width: 64em) {
+	.mobilenav {
+         
+	}
+}
+@media print, screen and (max-width: 40em) {
+    .mobilenav {
+        .menu-usuario {margin-top: 5px;}
+    }
+}

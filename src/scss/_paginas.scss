@@ -1,0 +1,197 @@
+
+.home-page {
+	header { background: url(../img/artigos/artigo-home.jpg) no-repeat center;padding-bottom:8%;
+		h4 {display: block;}
+		.button {margin-top: 2rem;}
+	}
+	.button {display: inline-block;}
+	
+	.o-que-podemos-fazer {
+		.card {border: 1px solid $light;position: relative; min-height: 18rem; margin-bottom: 1.5rem; padding: 1.5rem ;
+			@media print, screen and (min-width: 1024px) and (max-width: 1366px) {
+				min-height: 22rem;
+			}
+
+			h3{margin-top: 1rem;}
+			p {margin-bottom: 0;}
+		}
+		.card:hover {@extend .sombra}
+	}
+	.nossos-clientes {overflow: hidden; 
+		@media print, screen and (max-width: 40em){
+			.marca {margin: 3px 0;}
+		}
+	}
+	@media print, screen and (min-width: 40em) and (max-width: 64em) {
+			.nossos-clientes {
+				.columns {padding: 0 0.25rem;}
+				.marca {margin: 0.5rem 0 0 0;}
+			}
+		}
+	@media print, screen and (max-width: 64em){
+			header {height: 100vh; background: url(../img/artigos/artigo-home-mobile.jpg) no-repeat center;
+				.titulo-da-pagina {position: absolute; bottom: 3rem; left: 0;}
+			}
+		}
+	.ultimos-artigos {
+		a {
+			margin-bottom: 1.75rem; display: block;
+		}
+	}
+	
+}
+.cta {background: url(../img/topos/cta.jpg) no-repeat center; padding: 6rem 0; background-size:cover; 
+	h2 {color:#fff;}
+ }
+.sobre { 
+	.sobre {a {opacity: 1;}}
+	header { background: url(../img/topos/sobre.jpg) no-repeat center;}
+	.equipe {
+		.equipe-base {
+			background-image: url(../img/equipe/equipe-sima-contabil.jpg);
+			background-color: #f2f2f2;
+			background-repeat: no-repeat;
+			height: 9rem;
+			margin: 0.75rem 0;
+		}
+		.sidney { background-position: center 2.5% }
+		.max { background-position: center 8% }
+		figure {margin-bottom: 1.5rem;}
+		
+		.relative{ width: 100%; height: 9rem;  overflow: hidden;
+			img {display: absolute; top:0; }
+		}
+		@media print, screen and (max-width: 40em) {
+			.relative{  height: auto;}
+			.columns {padding: 0 0.25rem;}
+			.texto {height: 1.5rem;}
+		}
+	}
+	.parcerias {
+		img {margin-bottom: 1.5rem;}
+	}
+}
+.blog, .single {
+	.icon {width: 0.8rem;height: 0.8rem;}
+	.reply { 
+		.icon {   display: none;} 
+	}
+	.comment-author, .comment-author h3{margin: 0;}
+	.comment-reply-title {margin-bottom: 1.5rem;}
+}
+.side-blog {
+	h3 {
+		margin-bottom: 1rem;
+	}
+	.current-cat a {color:$destaque;}
+	li { font-size: 0.8rem; padding-bottom: 0.5rem; 
+		a {color: inherit;
+			box-shadow: none;
+		}
+
+	}
+}
+.archive {
+	header h4 {display: block;}
+}
+.archive, .blog, .single, .error404 {
+	header { background: url(../img/topos/cta.jpg) no-repeat center;}
+	.link-more, .cta {display: none;}
+	article h2{ margin-bottom:1.75rem;}
+	.blog {a {opacity: 1;}}
+}
+.post-edit-link {margin-left: 0.5rem; color: $forte;}
+.blog {
+	.archive {display: none;}
+	
+	.cta {display: none;}
+}
+.single {
+	.entry-content {
+		ul {@extend .lista-de-atividades;}
+	}
+	.comment-author {
+		img {display: none;}
+	}
+	.byline {display: block!important;}
+	header .byline {padding-bottom:1.5rem; }
+	#main {
+		.clear { padding: 3rem 0 0 4rem; border-top: 1px solid $light; margin-top: 3rem; position: relative;
+			.avatar {top:1.5rem; position: absolute; left: 0; width: 3rem;
+				img { border-radius: 50rem; }
+			}
+			a {display: block; margin-bottom: 0.75rem;}
+		}
+	}
+	
+	header h4 {display: block;}
+	
+	
+}
+.servicos  { 
+	.servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/servicos.jpg) no-repeat center;}
+}
+.como-trabalhamos  { 
+	.como-trabalhamos {a {opacity: 1;}}
+	header { background: url(../img/topos/como-trabalhamos.jpg) no-repeat center;}
+}
+.clientes  { 
+	.clientes {a {opacity: 1;}}
+	header { background: url(../img/topos/clientes.jpg) no-repeat center;}
+	.bloco-de-clientes { margin-bottom: 1rem ; }
+	.bloco-de-clientes:last-of-type { margin-bottom: 0; }
+}
+.contato  { 
+	.cta {display: none;}
+	.contato {a {opacity: 1;}}
+	header { background: url(../img/topos/contato.jpg) no-repeat center;}
+	.erro {
+		input {border: 1px solid $destaque;}
+		small {color:$destaque;}
+	}
+
+	.sucesso { display: none;  position: fixed; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); top:0; z-index: 1;
+		.sucesso_inner {width: 20rem; padding: 1.5rem; margin: 3rem auto 0 auto; @extend .sombra; background: #fff;}
+	}
+	.sucesso-ativado {display: block;}
+}
+.contabilidade-para-startups { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/contabilidade-para-startups-2.jpg) no-repeat center;}
+}
+.paralegal { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/paralegal.jpg) no-repeat center;}
+}
+.outsourcing-contabil { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/outsourcing-contabil.jpg) no-repeat center;}
+}
+.outsourcing-fiscal { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/outsourcing-fiscal.jpg) no-repeat center;}
+}
+.outsourcing-financeiro { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/outsourcing-financeiro.jpg) no-repeat center;}
+}
+.folha-de-pagamento-administracao-de-beneficios { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/folha-de-pagamento-administracao-de-beneficios.jpg) no-repeat center;}
+}
+.consultoria-estrategica-de-processos-e-sistemas { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/consultoria-estrategica-de-processos-e-sistemas.jpg) no-repeat center;}
+}
+.pessoa-fisica { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/pessoa-fisica.jpg) no-repeat center;}
+}
+.loan-staff-operacional { .servicos {a {opacity: 1;}}
+	header { background: url(../img/topos/loan-staff-operacional.jpg) no-repeat center;}
+}
+
+/* Aside */
+.contabilidade-para-startups {.contabilidade-para-startups{color: $destaque;}}
+.paralegal {.paralegal{color: $destaque;}}
+.outsourcing-contabil {.outsourcing-contabil{color: $destaque;}}
+.outsourcing-fiscal {.outsourcing-fiscal {color: $destaque;}}
+.outsourcing-financeiro {.outsourcing-financeiro{color: $destaque;}}
+.folha-de-pagamento-administracao-de-beneficios {.folha-de-pagamento-administracao-de-beneficios{color: $destaque;}}
+.consultoria-estrategica-de-processos-e-sistemas {.consultoria-estrategica-de-processos-e-sistemas{color: $destaque;}}
+.pessoa-fisica {.pessoa-fisica {color: $destaque;}}
+.loan-staff-operacional {.loan-staff-operacional {color: $destaque;}}
+
