@@ -16,5 +16,5 @@ jobs:
           server: ${{ secrets.SIMA_FTP_SERVER }}
           username: ${{ secrets.SIMA_FTP_USERNAME }}
           password: ${{ secrets.SIMA_FTP_PASS }}
-          local-dir: ./sync_test/
-          server-dir: /public_html/sync_test/
+          local-dir: ./public/
+          server-dir: /public_html/
